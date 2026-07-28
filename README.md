@@ -26,12 +26,13 @@ A static GitHub Pages website for Kavana Labs Engineering Series standard operat
 
 ## Deploy
 
-GitHub Pages deploys from the repository root. Commit and push to `main`:
+Every push to `main` triggers the **Deploy to GitHub Pages** workflow (`.github/workflows/deploy.yml`), which uploads the repository root and deploys it. Each deploy appears as a normal Actions run attributed to its commit, and can be watched or re-run there (`workflow_dispatch` is enabled for manual deploys). The Pages source is set to "GitHub Actions" — do not switch it back to "Deploy from a branch".
 
 ```bash
 git add .
 git commit -m "Update SOP library"
 git push
+gh run watch   # optional: follow the deploy
 ```
 
 The landing page will be available at the repository's GitHub Pages URL. The volunteer SOP will be at:

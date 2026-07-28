@@ -67,6 +67,16 @@ The theme mirrors the main Kavana Labs website. Tokens live at the top of `asset
 
 Use "programs" (never "programmes"), "Kavana Labs Engineering Series" (never "Kavana Education System"), and "KES 001" for the active module.
 
+## Site URL
+
+The GitHub organisation is `Kavana-Labs` (hyphenated), so this repository is served as a **project site** at:
+
+```text
+https://kavana-labs.github.io/kavanalabs.github.io/
+```
+
+`index.html` and the SOP pages use relative paths and work at any base. `404.html` is the exception — GitHub serves it for any missing path, so it must use absolute URLs, which currently hardcode the `/kavanalabs.github.io/` base. **If you rename the repository or add a custom domain, update the absolute paths in `404.html`.**
+
 ## Optional custom domain
 
 Do not add a `CNAME` file unless you have selected the domain or subdomain. When ready, create a root-level file named `CNAME` containing only the domain, for example:
@@ -75,4 +85,4 @@ Do not add a `CNAME` file unless you have selected the domain or subdomain. When
 sops.kavanalabs.org
 ```
 
-Then configure the matching DNS record and custom domain setting in GitHub Pages.
+Then configure the matching DNS record and custom domain setting in GitHub Pages, and change the absolute `/kavanalabs.github.io/` paths in `404.html` to `/`.

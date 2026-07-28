@@ -1,17 +1,24 @@
 # KES SOP Library
 
-A static GitHub Pages website for Kavana Labs Engineering Series standard operating procedures.
+A static GitHub Pages website for Kavana Labs Engineering Series standard operating procedures, themed to match the Kavana Labs brand (kavanalabs.org).
 
 ## Included files
 
 ```text
 .
 ├── index.html
+├── 404.html
 ├── .nojekyll
 ├── README.md
 ├── assets/
 │   ├── site.css
 │   ├── site.js
+│   ├── logo-nav.svg
+│   ├── arrow-light.svg
+│   ├── favicon.png
+│   ├── fonts/
+│   │   ├── manifold-extended-demibold.woff2
+│   │   └── 42dot-sans-latin.woff2
 │   └── volunteer-recruitment-onboarding-flow.png
 └── sops/
     └── volunteer-recruitment-onboarding.html
@@ -19,11 +26,11 @@ A static GitHub Pages website for Kavana Labs Engineering Series standard operat
 
 ## Deploy
 
-GitHub Pages is already configured to deploy from the repository root, so copy these files into the root of the repository, commit and push:
+GitHub Pages deploys from the repository root. Commit and push to `main`:
 
 ```bash
 git add .
-git commit -m "Add KES SOP library and volunteer onboarding SOP"
+git commit -m "Update SOP library"
 git push
 ```
 
@@ -41,19 +48,24 @@ The landing page will be available at the repository's GitHub Pages URL. The vol
 4. Add a new card to the `sop-grid` in `index.html`.
 5. Add any SOP-specific images to `assets/` and reference them using `../assets/filename.png` from an SOP page.
 
-## Brand colours
+## Brand
 
-The site uses editable CSS variables at the top of `assets/site.css`. Replace these values when the official Kavana Labs brand palette is finalised:
+The theme mirrors the main Kavana Labs website. Tokens live at the top of `assets/site.css`:
 
-```css
-:root {
-  --navy-950: #07162f;
-  --navy-900: #0b2147;
-  --blue-600: #1c6cc5;
-  --teal-600: #078b95;
-  --gold-500: #ef8d16;
-}
-```
+- **Surfaces** — black `#000000` heroes/footer with an engineering grid and purple glow orb; off-white `#f9fafb` / light `#f3f4f6` content sections.
+- **Ink ramp** — the Tailwind gray ramp (`#f9fafb` → `#111827`) used across the main site.
+- **Accent** — brand glow purple `#9d87fb` (focus rings, checklist boxes, active states, highlights).
+- **Headings** — Manifold Extended CF Demi Bold with the site's clipped gradients (`#6d6d6d → #c2c3c3` on dark, `#2e2e2f → #616266` on light).
+- **Body** — 42dot Sans (variable). **Mono labels** — Cascadia Code stack (eyebrows, badges, chips).
+- **Buttons** — the signature pill: white→grey gradient with a dark circular arrow badge and purple glow, or the 1px outline pill.
+
+### Font licensing note
+
+`manifold-extended-demibold.woff2` is the Fontspring **demo** cut (same file the main site ships). The demo watermarks digit `4` and most ASCII punctuation, so its `@font-face` carries a `unicode-range` whitelist — excluded characters intentionally fall back to 42dot Sans. Do not remove that `unicode-range` until the full Manifold family is licensed.
+
+## Language
+
+Use "programs" (never "programmes"), "Kavana Labs Engineering Series" (never "Kavana Education System"), and "KES 001" for the active module.
 
 ## Optional custom domain
 

@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Kavana Labs Engineering Series standard operating procedures and implementation guides.">
-  <meta name="theme-color" content="#07162f">
+  <meta name="theme-color" content="#050505">
   <title>KES Standard Operating Procedures | Kavana Labs</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" href="assets/fonts/manifold-extended-demibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/42dot-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -13,27 +16,29 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="./" aria-label="KES SOP Library home">
-        <span class="brand-mark">KES</span>
-        <span>KES SOP Library<small>Kavana Labs Engineering Series</small></span>
+        <img class="brand-logo" src="assets/logo-nav.svg" alt="Kavana Labs">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-text">SOP Library<small>Kavana Labs Engineering Series</small></span>
       </a>
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="#sops" aria-current="page">SOPs</a>
         <a href="https://kavanalabs.org">Kavana Labs</a>
-        <a class="header-action" href="sops/volunteer-recruitment-onboarding.html">Open current SOP</a>
+        <a class="btn btn-primary btn-sm" href="sops/volunteer-recruitment-onboarding.html">Open current SOP<span class="btn-arrow"><img src="assets/arrow-light.svg" alt="" aria-hidden="true"></span></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
       <div class="hero-inner">
         <div>
-          <span class="eyebrow">Operations and programme quality</span>
-          <h1>KES Standard Operating Procedures</h1>
-          <p>A practical, version-controlled operations library for delivering safe, consistent and repeatable Kavana Labs Engineering Series programmes.</p>
+          <span class="eyebrow">Operations and program quality</span>
+          <h1 class="heading-gradient-light">KES Standard Operating Procedures</h1>
+          <p>A practical, version-controlled operations library for delivering safe, consistent and repeatable Kavana Labs Engineering Series programs.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#sops">Browse SOPs</a>
-            <a class="btn btn-secondary" href="sops/volunteer-recruitment-onboarding.html#master-checklist">Open master checklist</a>
+            <a class="btn btn-primary" href="#sops">Browse SOPs<span class="btn-arrow"><img src="assets/arrow-light.svg" alt="" aria-hidden="true"></span></a>
+            <a class="btn btn-outline" href="sops/volunteer-recruitment-onboarding.html#master-checklist">Open master checklist</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="Library summary">
@@ -47,19 +52,18 @@
 
     <section class="page-shell" id="sops">
       <div class="section-heading">
-        <div>
-          <h2>Published procedures</h2>
-          <p>Each SOP is written as an executable operating guide with clear talking points, responsibilities, decisions and checklists.</p>
-        </div>
+        <span class="eyebrow on-light">Operations library</span>
+        <h2 class="heading-gradient-dark">Published procedures</h2>
+        <p>Each SOP is written as an executable operating guide with clear talking points, responsibilities, decisions and checklists.</p>
       </div>
 
       <div class="sop-grid">
         <article class="sop-card">
           <div class="sop-card-top"></div>
           <div class="sop-card-body">
-            <span class="tag">People Operations</span>
+            <span class="badge badge-active">Operational</span>
             <h3>Volunteer Recruitment and Onboarding</h3>
-            <p>Recruit, assess, onboard, activate and review non-instructional volunteers supporting KES programmes and the wider Kavana Labs team.</p>
+            <p>Recruit, assess, onboard, activate and review non-instructional volunteers supporting KES programs and the wider Kavana Labs team.</p>
             <footer>
               <span>Version 1.0</span>
               <a class="card-link" href="sops/volunteer-recruitment-onboarding.html">Read SOP →</a>
@@ -69,7 +73,7 @@
 
         <article class="sop-card placeholder-card">
           <div class="sop-card-body">
-            <span class="tag">Expandable library</span>
+            <span class="badge badge-neutral">Expandable library</span>
             <h3>Add the next KES SOP</h3>
             <p>Duplicate the existing SOP page, update its document controls and content, then add a card here.</p>
             <footer>
@@ -84,6 +88,9 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
+      <a class="footer-brand" href="https://kavanalabs.org" aria-label="Kavana Labs">
+        <img src="assets/logo-nav.svg" alt="Kavana Labs">
+      </a>
       <p>© Kavana Labs. KES means Kavana Labs Engineering Series.</p>
       <a href="mailto:info@kavanalabs.org">info@kavanalabs.org</a>
     </div>
